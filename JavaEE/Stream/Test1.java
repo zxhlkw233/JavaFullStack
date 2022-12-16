@@ -29,5 +29,12 @@ public class Test1 {
         }).collect(Collectors.toList());
         System.out.println(stringStream);
 
+        Stream<Integer> stream1 = Stream.of(1,9,10,6,8,3);
+//        stream1.sorted().forEach(System.out::println);
+        System.out.println("result="+stream1.allMatch(s->s>=1));
+
+        List<String> list2 = Arrays.asList("Jhonny", "David", "jack", "Duke", "Jill", "Dany", "Julia", "Divya");
+        String j = list2.parallelStream().filter(s -> s.startsWith("J")).findAny().get();
+        System.out.println(j);
     }
 }

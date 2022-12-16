@@ -22,5 +22,6 @@ public class MainTest {
         Object[] objects1 = list.toArray();
         System.out.println(objects1.getClass());
         Object[] objects = list.toArray();
+
     }
 }
