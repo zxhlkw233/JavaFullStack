@@ -1,9 +1,6 @@
 package JavaEE.Collection.Set;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,6 +30,15 @@ public class Main {
 
         //list转set相反，但是注意：list转set某些数据可能就没了，因为set不允许重复
 
+        //判断是否重复
+        Set<Integer> set = new HashSet<>();
+        set.add(1);
+
+        System.out.println(set.add(1)); //如果添加重复返回false
+        System.out.println(set.contains(1));//如果包含这个数值，返回true
+
+        System.out.println(set.add(2));//true
+        System.out.println(set.contains(3));//false
 
 
     }

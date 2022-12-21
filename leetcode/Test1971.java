@@ -22,6 +22,7 @@ public class Test1971 {
         List<List<Integer>> list = new ArrayList<List<Integer>>();
         List<Integer> list1 = new ArrayList<>();
         list.add(list1);
+
     }
 
 }

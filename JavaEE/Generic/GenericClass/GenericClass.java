@@ -4,6 +4,8 @@ public class GenericClass<T> {
     private T name;
     private int age;
 
+
+
     public int getAge() {
         return age;
     }
