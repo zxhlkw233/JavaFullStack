@@ -1,4 +1,4 @@
-package JavaEE.string_test;
+package JavaEE.String;
 
 public class Test {
     public static void main(String[] args) {
