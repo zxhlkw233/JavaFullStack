@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+  <h2>{{message}}</h2>
+  <h2><font color="red">{{score}}</font></h2>
+  <button v-on:click="incr">点击分数+1</button>
+  <button v-on:click="addMore(10)">点击分数+任意</button>
+  <button v-on:click="addMoreAndString(20,'成绩优秀',false,true)">点击分数+任意，message拼接一个字符串</button>
+</div>
+<script type = "text/javascript">
+  new Vue({
+    el:"#app",
+    data:{
+      message:"张小虎",
+      score:"59"
+    },
+    methods:{
+      incr:function () {
+        this.score++;
+      },
+      addMore:function (number) {
+        this.score += number;
+
+      },
+      addMoreAndString:function (num, grade, a, b) {
+        this.score += num;
+        this.mesage +=grade;
+        console.log(a);
+        console.log(b);
+      },
+      obj:function (obj) {
+        console.log(obj)
+      }
+    }
+
+  })
+</script>
+</body>
+</html>

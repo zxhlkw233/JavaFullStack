@@ -40,6 +40,14 @@ public class Main {
         System.out.println(set.add(2));//true
         System.out.println(set.contains(3));//false
 
+        //set转换为数组
+        Set<Integer> set1 = new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        int[] array = new int[set.size()];
+        
+        set.toArray();
 
     }
 }

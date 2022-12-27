@@ -5,11 +5,11 @@ import java.util.Set;
 
 public class Test1805 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution1805 solution = new Solution1805();
         solution.numDifferentIntegers("a123bc34d8ef34");
     }
 }
-class Solution {
+class Solution1805 {
     public int numDifferentIntegers(String word) {
 
         Set<String> s = new HashSet<>();

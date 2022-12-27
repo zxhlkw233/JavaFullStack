@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p>点击下面的按钮，只要i小于5 就一直循环代码块</p>
+<button onclick="myFunction1()">点击这里</button>
+<p id="demo"></p>
+<script>
+  function myFunction(){
+    var x = "",i = 0;
+    while(i < 5){
+      x = x + "该数字为" + i + "<br>";
+      i++;
+    }
+    document.getElementById("demo").innerHTML = x;
+  }
+  function myFunction1(){
+    cars = ["BMW","Volvo","Saab","Ford"];
+    var x = "";
+    var i = 0;
+    while(cars[i]){
+      // x = x + "不知道是啥：" + cars[i] + "<br>";
+      x = x + cars[i] + "<br>";
+      i++;
+    }
+    document.getElementById("demo").innerHTML = x;
+  }
+</script>
+</body>
+</html>
