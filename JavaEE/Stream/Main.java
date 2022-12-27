@@ -2,12 +2,14 @@ package JavaEE.Stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
+        //https://blog.csdn.net/QiuHaoqian/article/details/120942134
         //1.如何生成流
         //通过集合生成
         List<Integer> integerList = Arrays.asList(9,4,8,7,1,2,3);
@@ -51,9 +53,48 @@ public class Main {
         List<Integer> collect2 = stringList2.stream()
                 .map(String::length)
                 .collect(Collectors.toList());
-        System.out.println(collect2);
+//        System.out.println(collect2);
 
         //匹配所有元素
+        List<Integer> integerList3 = Arrays.asList(1,2,3,4,5);
+//        if(integerList3.stream().allMatch(i -> i >3)){
+//            System.out.println("所有元素都大于3");
+//        }else{
+//            System.out.println("并非所有元素值都大于3");
+//        }
+        //noneMatch() 全部不匹配
+
+        //count 统计流中元素个数
+        List<Integer> integerList4 = Arrays.asList(1,2,3,4,51);
+        long count = integerList4.stream().count();
+//        System.out.println(count);
+
+        //findFirst查找第一个
+        List<Integer> integerList5 = Arrays.asList(1,2,3,4,5);
+        Optional<Integer> first = integerList5.stream().filter(i -> i > 2).findFirst();
+//        System.out.println(first);
+
+        //findAny 随机查找一个
+        List<Integer> integerList6 = Arrays.asList(1,2,3,4,5);
+        Optional<Integer> any = integerList6.stream().filter(i -> i > 2).findAny();
+//        System.out.println(any);
+
+        //reduce 将流中的元素组合
+        List<Integer> integerList7 = Arrays.asList(1,2,3,4);
+        Integer reduce = integerList7.stream().reduce(0, Integer::sum);
+//        System.out.println(reduce);
+
+        //获取最大值
+        List<Integer> integerList8 = Arrays.asList(1,2,3,4,5);
+        Optional<Integer> reduce1 = integerList8.stream().reduce(Integer::min);
+        Optional<Integer> reduce2 = integerList8.stream().reduce(Integer::max);
+//        System.out.println(reduce1);
+//        System.out.println(reduce2);
+        List<String> stringList4 = Arrays.asList("Java 8","Lambda","In","Action");
+        Optional<Integer> reduce3 = stringList4.stream().map(String::length).reduce(Integer::min);
+        Optional<Integer> reduce4 = stringList4.stream().map(String::length).reduce(Integer::max);
+        System.out.println(reduce3);
+        System.out.println(reduce4);
 
     }
 }
