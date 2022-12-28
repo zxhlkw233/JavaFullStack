@@ -3,7 +3,7 @@ package DataStructureAndArithmetic.PatternMatching;
 public class GetNext {
     public static void main(String[] args) {
         int[] aabbaacs = getNext("aabbaac");
-        for (int i = 0; i < aabbaacs.length; i++) {
+        for (int i = 1; i < aabbaacs.length; i++) {
             System.out.print(aabbaacs[i] + " ");
         }
     }
