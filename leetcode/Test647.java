@@ -3,31 +3,26 @@ package leetcode;
 public class Test647 {
     public static void main(String[] args) {
         Solution647 solution647 = new Solution647();
-        int aabbcd = solution647.countSubstrings("aabbcd");
-        System.out.println(aabbcd);
+        solution647.countSubstrings("aabbccd");
     }
 }
 class Solution647 {
-    private int ans = 0;
     public int countSubstrings(String s) {
-        for (int i = 0; i < s.length(); i++) {
-            // 以单个字母为中心的情况
-            isPalindromic(s, i, i);
-            // 以两个字母为中心的情况
-            isPalindromic(s, i, i + 1);
+        int ans = 0;
+        boolean[][] dp =  new boolean[s.length()][s.length()];
+        for(int i = s.length() - 1; i >= 0; i--){
+            for(int j = i; j < s.length(); j++){
+                if(s.charAt(i) == s.charAt(j)){
+                    if(j - i <= 1){
+                        dp[i][j] = true;
+                        ans++;
+                    }else if(dp[i + 1][j - 1]){
+                        dp[i][j] = true;
+                        ans++;
+                    }
+                }
+            }
         }
         return ans;
     }
-    private void isPalindromic(String s, int i, int j) {
-        while (i >= 0 && j < s.length()) {
-            if (s.charAt(i) != s.charAt(j)) return ;
-            i--;
-            j++;
-            ans++;
-        }
-    }
-
-
 }
-
-
