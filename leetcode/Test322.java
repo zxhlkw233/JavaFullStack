@@ -1,38 +1,31 @@
 package leetcode;
 
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Deque;
 
 public class Test322 {
     public static void main(String[] args) {
         int[] nums = new int[]{1,2,5};
         Solution322 solution322 = new Solution322();
-        solution322.coinChange(nums,11);
+        int i = solution322.coinChange(nums, 11);
+        System.out.println(i);
     }
 }
 class Solution322 {
-    public int coinChange(int[] coins,int amount){
-        int ans = 0;
-        Deque<Integer> deque = new ArrayDeque<>();
-        int dfs = dfs(coins, deque, ans, amount);
-        return dfs;
-    }
-    public int sum(Deque<Integer> deque){
-        int sum = 0;
-        for (Integer integer : deque) {
-
+    public int coinChange(int[] coins, int amount) {
+        int max = amount + 1;
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, max);
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                if (coins[j] <= i) {
+                    dp[i] = Math.min(dp[i], dp[i - coins[j]] ) + 1;
+                }
+            }
         }
-        return sum;
-    }
-    public int dfs(int [] coins, Deque<Integer> deque,int ans,int amount){
-        if(sum(deque) == amount){
-            return 0;
-        }
-        for(int i = coins.length - 1;i > 0;i--){
-            deque.add(coins[i]);
-            dfs(coins,deque,ans,amount);
-            deque.removeLast();
-        }
-        return 1;
+        return dp[amount] > amount ? -1 : dp[amount];
     }
 }
+
