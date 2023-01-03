@@ -1,4 +1,4 @@
-package JavaEE.Lambda.Demand_Demo2;
+package JavaEE.Thread.ThreadLocal.Demand_Demo2;
 
 import java.sql.Connection;
 import java.sql.SQLException;
