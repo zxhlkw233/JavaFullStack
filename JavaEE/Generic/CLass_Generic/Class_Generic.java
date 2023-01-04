@@ -1,6 +1,6 @@
 package JavaEE.Generic.CLass_Generic;
 
-import JavaEE.Generic.Test1.ClassA;
+
 
 public class Class_Generic {
     public static <T extends Grandpa> T fun(Class<T> clazz){
