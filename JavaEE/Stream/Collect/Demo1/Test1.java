@@ -14,10 +14,14 @@ public class Test1 {
         System.out.println(list);
 
         List<Person> list1 = new ArrayList<Person>(){{
-            new Person(1,"a","A");
-            new Person(2,"b","B");
-            new Person(3,"c","C");
-            new Person(4,"d","D");
+            Person person = new Person(1, "a", "A");
+            Person person1 = new Person(2, "b", "B");
+            Person person2 = new Person(3, "c", "C");
+            Person person3 = new Person(4, "d", "D");
+            add(person);
+            add(person1);
+            add(person2);
+            add(person3);
         }};
         System.out.println(list1);
 
