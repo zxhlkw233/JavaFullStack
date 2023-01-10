@@ -7,13 +7,13 @@ import java.util.stream.Collectors;
 public class Test1 {
     public static void main(String[] args) {
         List<Person> list = new ArrayList<>();
-        list.add(new Person(1,"a","A"));
-        list.add(new Person(2,"b","B"));
-        list.add(new Person(3,"c","C"));
-        list.add(new Person(4,"d","D"));
+        list.add(new Person(1, "a", "A"));
+        list.add(new Person(2, "b", "B"));
+        list.add(new Person(3, "c", "C"));
+        list.add(new Person(4, "d", "D"));
         System.out.println(list);
 
-        List<Person> list1 = new ArrayList<Person>(){{
+        List<Person> list1 = new ArrayList<Person>() {{
             Person person = new Person(1, "a", "A");
             Person person1 = new Person(2, "b", "B");
             Person person2 = new Person(3, "c", "C");
@@ -31,4 +31,5 @@ public class Test1 {
         System.out.println(collect);
         System.out.println(collect1);
     }
+
 }
