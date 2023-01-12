@@ -14,5 +14,11 @@ public class Test2 {
         IntegerMath subtraction = (a,b) -> a - b;
         System.out.println("2 + 1 = "+ test2.operateBinary(2,1,addition));
         System.out.println("2 - 1 = "+ test2.operateBinary(2,1,subtraction));
+        System.out.println(test2.operateBinary(2, 1, new IntegerMath() {
+            @Override
+            public int operation(int a, int b) {
+                return 2 - 1;
+            }
+        }));
     }
 }

@@ -1,4 +1,4 @@
-package JavaEE.Thread.Multithreading_exercise;
+package JavaEE.Thread.Multithreading.Multithreading_exercise;
 
 class Account {
     private int balance;
