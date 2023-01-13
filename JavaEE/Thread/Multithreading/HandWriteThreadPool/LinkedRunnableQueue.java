@@ -46,12 +46,20 @@ public class LinkedRunnableQueue implements RunnableQueue{
 
     @Override
     public Runnable take() {
-        //如果缓存队列为空，则挂起，等待新的任务https://zhuanlan.zhihu.com/p/62394330
-        return null;
+        //如果缓存队列为空，则挂起，等待新的任务进来唤醒
+        while(runnableLinkedList.isEmpty()){
+            try{
+                runnableLinkedList.wait();
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+        return runnableLinkedList.removeFirst();
     }
 
     @Override
     public int size() {
-        return 0;
+        //返回list中的个数
+        return runnableLinkedList.size();
     }
 }

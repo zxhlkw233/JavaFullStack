@@ -8,6 +8,10 @@ public class User {
 
     public String zxh;
 
+    public User(long l, String s, int i) {
+
+    }
+
     public String getZxh() {
         return zxh;
     }

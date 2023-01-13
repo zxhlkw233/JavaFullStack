@@ -2,7 +2,7 @@ package JavaEE.Thread.Multithreading.HandWriteThreadPool;
 
 public interface ThreadPool {
     //提交任务到线程池
-    void execute(Runnable runnable);
+    void execute(Runnable runnable) throws IllegalAccessException;
     //关闭
     void shutdown();
     //获取线程池初始化时的线程大小
