@@ -1,4 +1,4 @@
-package DataStructureAndArithmetic.Sort.HeapSort;
+package DataStructureAndArithmetic.Sort.SelectSort.HeapSort;
 
 import java.util.Arrays;
 public class Demo1{

@@ -1,4 +1,4 @@
-package DataStructureAndArithmetic.Sort.QuickSort;
+package DataStructureAndArithmetic.Sort.ExchangeSort.QuickSort;
 
 public class QuickSort1 {
     public static void main(String[] args) {
