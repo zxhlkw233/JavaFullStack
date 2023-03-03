@@ -13,7 +13,6 @@ class Solution316 {
         for (int i = 0; i < s.length(); i++) {
             num[s.charAt(i) - 'a']++;
         }
-
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
