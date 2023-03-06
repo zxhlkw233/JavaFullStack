@@ -9,7 +9,6 @@ public class Test215 {
         Solution215_1 solution2151 = new Solution215_1();
         int sort = solution2151.sort(new int[]{3, 2, 1, 5, 6, 4}, 4);
         System.out.println(sort);
-
     }
 }
 class Solution215 {
