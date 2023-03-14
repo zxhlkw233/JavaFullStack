@@ -15,7 +15,7 @@ equal():判断两个集合是否相等，若两个集合里面的元素相等，
 * */
 public class Set {
     public static void main(String[] args) {
-        HashSet_1<String> hashSet = new HashSet_1<>();
+        HashSet<String> hashSet = new HashSet<>();
         hashSet.add("1");
         hashSet.add("2");
         hashSet.add("3");
@@ -42,7 +42,7 @@ public class Set {
         //list转set相反，但是注意：list转set某些数据可能就没了，因为set不允许重复
 
         //判断是否重复
-        java.util.Set<Integer> set = new HashSet_1<>();
+        java.util.Set<Integer> set = new HashSet<>();
         set.add(1);
 
         System.out.println(set.add(1)); //如果添加重复返回false
@@ -52,7 +52,7 @@ public class Set {
         System.out.println(set.contains(3));//false
 
         //set转换为数组
-        java.util.Set<Integer> set1 = new HashSet_1<>();
+        java.util.Set<Integer> set1 = new HashSet<>();
         set.add(1);
         set.add(2);
         set.add(3);
