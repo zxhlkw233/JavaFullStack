@@ -6,6 +6,7 @@ public class Test279 {
         solution279.numSquares(14);
     }
 }
+
 class Solution279 {
     public int numSquares(int n) {
         int[] f = new int[n + 1];
@@ -19,5 +20,6 @@ class Solution279 {
         return f[n];
     }
 }
+
 
 

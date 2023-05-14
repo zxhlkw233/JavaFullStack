@@ -4,8 +4,11 @@ import java.util.UUID;
 
 public class Test {
     public static void main(String[] args) {
-        String id = UUID.randomUUID().toString().replaceAll("-", "");
-        System.out.println(UUID.randomUUID().toString());
-        System.out.println(id);
+        Test_1.fun();
+    }
+}
+class Test_1{
+    public static void fun(){
+        System.out.println("类方法");
     }
 }
