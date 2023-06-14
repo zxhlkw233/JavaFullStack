@@ -14,3 +14,6 @@ public class List_map {
         System.out.println(list);
     }
 }
+class a extends HashMap<Integer,String >{
+
+}

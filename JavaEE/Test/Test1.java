@@ -3,22 +3,28 @@ package JavaEE.Test;
 public class Test1 {
     public static void main(String[] args) {
 
-    }
-}
 
-abstract class pice{
-    protected int a;
-    protected int b;
-    public pice(){
-        System.out.println();
-    }
-    public abstract void a();
-}
-class s extends pice{
 
-    @Override
-    public void a() {
 
     }
 }
 
+class a{
+    int a;
+    int b;
+
+    public a(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public void fun(){
+//        this(a,b);
+    }
+}
+class b{
+    final static public int a = 10;
+    static public final int b = 10;
+    public final static int c = 10;
+
+}

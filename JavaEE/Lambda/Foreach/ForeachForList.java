@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ForeachForList {
     public static void main(String[] args) {
@@ -17,6 +18,13 @@ public class ForeachForList {
 
         items.forEach(item ->{
             System.out.println(item);
+        });
+        items.forEach(System.out::println);
+        items.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.printf(s);
+            }
         });
 
         List<Point> points = Arrays.asList(new Point(1,1),new Point(2,3));
